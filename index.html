@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Reason Creation</title>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -190,9 +191,7 @@
   
   <div class="topnav" style="font-size: 0.9em;">
     <a href="javascript:void(0);" onclick="switchtb('hm');">首页</a>
-    <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=53259574&version=offline&form=python&langType=python" target="_blank">招聘</a>
     <a href="javascript:void(0);" onclick="switchtb('xm');">项目</a>
-    <a href="javascript:void(0);" onclick="switchtb('cy');">成员名单</a>
     <a href="javascript:void(0);" onclick="switchtb('gywm');">关于我们</a>
   </div>
 
@@ -213,83 +212,29 @@
       <div class="card">
         <h2>最新资讯</h2>
         <p><span>→</span> <a href="https://code.xueersi.com/space/33484236" target="_blank">学而思社区主页</a></p>
-        <p><span>→</span> <a href="https://lcimh5.guozhufeng.com" target="_blank">åCIM h5ç«¯</a></p>
-        <p><span>→</span> <a href="https://lcim.guozhufeng.com" target="_blank">åCIM webç«¯</a></p>
       </div>
     </div>
   </div>
-  <div class="row" id="xm" style="display: none;">
+
+  <div class="row" id="xm" style="display: flex;">
     <div class="leftcolumn">
       <div class="row">
-        <div class="card3" data-link="https://code.xueersi.com/home/project/detail?lang=scratch&pid=24624860&version=3.0&langType=scratch">
-          <h2>å¤§åçºªå½ç</h2>
-          <p>æç»­æ´æ°ä¸­ï¼æ»ç¹èµéé«è¾¾400ï¼#é¬¼ç#æ¢</p>
+        <div class="card3" data-link="https://github.com/Voldemort230102/Double_Fly">
+          <h2>Double Fly</h2>
+          <p>一个管理程序：<a href="https://github.com/Voldemort230102/Double_Fly" target="_blank">入口</a></p>
         </div>
         <div class="card3" data-link="https://kdgzswsz.github.io/">
-          <h2>æ°å¯å¤å®ç½</h2>
-          <p>å¶å®å°±æ¯è¿éç¦...</p>
+          <h2>GTOJApi_Fly</h2>
+          <p>一个可以使用GTOJ的API的程序：<a href="https://github.com/Voldemort230102/GTOJApi_Fly" target="_blank">入口</a></p>
         </div>
         <div class="card3" data-link="https://kdgzswsz.github.io/">
-          <h2>kdå¥½åå</h2>
+          <h2>官网（就是这里呀）</h2>
           <p>ç±»ä¼¼æååæ»´ç½ç«ï¼æ­£å¨å¼åä¸­...</p>
         </div>
-        <div class="card3" data-link="https://kdgzswsz.github.io/kdchm.github.io/">
-          <h2>ãå½©è¹ç«ã</h2>
-          <p>ä¸ä¸ªæ¶æç½ç«</p>
-        </div>
-        <div class="card3" data-link="https://openai.com">
-          <h2>é¡¹ç®5</h2>
-          <p>æªå¼å</p>
-        </div>
-        <div class="card3" data-link="https://openai.com">
-          <h2>é¡¹ç®6</h2>
-          <p>æªå¼å</p>
-        </div>
       </div>
     </div>
   </div>
-  <div class="row" id="cy" style="display: none;">
-    <div class="leftcolumn">
-      <div class="row">
-        <div class="card" onclick="openInNewTab('https://code.xueersi.com/space/9909258?to=homepages')" style="padding: 5px 18px;">
-          <h2>èw</h2>
-          <p>å®¤é¿/åå§äºº</p>
-        </div>
-        <div class="card" onclick="openInNewTab('https://code.xueersi.com/space/9439092?to=homepages')" style="padding: 4px 18px;">
-          <h2>éè´</h2>
-          <p>å¯å®¤é¿</p>
-        </div>
-        <div class="card" onclick="openInNewTab('https://code.xueersi.com/space/24022994?to=homepages')" style="padding: 5px 18px;">
-          <h2>åååº</h2>
-          <p>scratché¨é¨é¿</p>
-        </div>
-        <div class="card" onclick="openInNewTab('https://code.xueersi.com/space/21659524?to=homepages')" style="padding: 5px 18px;">
-          <h2>æ¨ä¼èª</h2>
-          <p>Pythoné¨é¨é¿</p>
-        </div>
-        <div class="card" onclick="openInNewTab('https://code.xueersi.com/space/24804907?to=homepages')" style="padding: 5px 18px;">
-          <h2>æªå®</h2>
-          <p>c++é¨é¨é¿</p>
-        </div>
-        <div class="card" onclick="openInNewTab('https://code.xueersi.com/space/22650542?to=homepages')" style="padding: 5px 18px;">
-          <h2>çç¿å¥½</h2>
-          <p>äººäºé¨é¨é¿</p>
-        </div>
-        <div class="card" onclick="openInNewTab('https://code.xueersi.com/home/project/detail?lang=code&pid=53259574&version=offline&form=python&langType=python')" style="padding: 5px 18px;">
-          <h2>æªå®</h2>
-          <p>å®£ä¼ é¨é¨é¿</p>
-        </div>
-        <div class="card" onclick="openInNewTab('https://code.xueersi.com/home/project/detail?lang=code&pid=53259574&version=offline&form=python&langType=python')" style="padding: 5px 18px;">
-          <h2>æªå®</h2>
-          <p>æªå®</p>
-        </div>
-        <div class="card" style="padding: 5px 20px;">
-          <h2>ä»¥ä¸æ¯é«ç®¡æå</h2>
-          <p>æªæ­¢ç®åï¼æä»¬å¤§çº¦æ45äºº</p>
-        </div>
-      </div>
-    </div>
-  </div>
+
   <div class="row" id="gywm" style="display: none;">
     <div class="leftcolumn" style="display: inline-block;">
       <div class="card2">

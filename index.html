@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>Voldemort的官网</title>
+  <title>Reason Creation</title>
   <style>
     * {
       box-sizing: border-box;
@@ -51,18 +51,15 @@
       flex-wrap: wrap;
       justify-content: center;
     }
-    
     .leftcolumn {
       flex: 70%;
       padding: 20px;
     }
-    
     .rightcolumn {
       flex: 30%;
       padding: 20px;
       background-color: #f1f1f1;
     }
-    
     .card {
       background-color: white;
       padding: 20px 15px;
@@ -70,7 +67,7 @@
       text-align: center;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s all;
-      flex: 1 0 21%; /* åä¸ªå¡çä¸è¡ */
+      flex: 1 0 21%;
       cursor: pointer;
       display: flex;
       flex-direction: column;
@@ -87,7 +84,6 @@
       box-sizing: border-box;
       cursor: pointer;
     }
-    
     .card2:hover {
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
@@ -103,26 +99,22 @@
       position: relative;
       cursor: pointer;
     }
-    
     .card3:hover {
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
     .card:hover {
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
-    
     .center {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 30vh;
     }
-    
     img {
       max-width: 100%;
       height: auto;
     }
-    
     .footer {
       text-align: center;
       padding: 20px;
@@ -130,7 +122,6 @@
       color: white;
       margin-top: 20px;
     }
-    
     @media screen and (max-width: 800px) {
       .leftcolumn, .rightcolumn {
         flex: 100%;
@@ -145,7 +136,6 @@
       color: black;
       animation: floatUp 2s forwards;
     }
-    
     @keyframes floatUp {
       0% {
         opacity: 1;
@@ -156,7 +146,6 @@
         transform: translateY(-100px);
       }
     }
-    
     .click-area {
       flex: 1;
       display: flex;
@@ -165,7 +154,6 @@
       align-items: center;
       cursor: pointer;
     }
-    
     .fireworks {
       position: absolute;
       top: 0;
@@ -193,160 +181,40 @@
         }
     }
   </script>
-  <script>
-    function openInNewTab(url) {
-      window.open(url, '_blank');
-    }
-
-    // çå¬é®çäºä»¶
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'k') {
-        document.kPressed = true;
-      }
-      if (event.key === 'd') {
-        document.dPressed = true;
-      }
-      if (document.kPressed && document.dPressed) {
-        var password = prompt("è¯·è¾å¥ç®¡çåå¯ç ï¼");
-        if (password === "kd123") {
-          alert("è¿å¥ç®¡çåæ¨¡å¼                             æ ¹æ¬æ²¡æç®¡çåæ¨¡å¼~");
-        } else {
-          alert("è¿å¥ç®¡çåæ¨¡å¼å°±æªäº");
-        }
-        document.kPressed = false;
-        document.dPressed = false;
-      }
-    });
-
-    document.addEventListener('keyup', function(event) {
-      if (event.key === 'k') {
-        document.kPressed = false;
-      }
-      if (event.key === 'd') {
-        document.dPressed = false;
-      }
-    });
-
-
-  </script>
 </head>
 <body>
   <div class="header">
-    <h1>æ°å¯å¤å®ç½</h1>
-    <p>å¨ç§°æ°å¯å¤å·¥ä½å®¤</p>
+    <h1>Reason Creation</h1>
+    <p>由Voldemort建立</p>
   </div>
   
   <div class="topnav" style="font-size: 0.9em;">
-    <a href="javascript:void(0);" onclick="switchtb('hm');">é¦é¡µ</a>
-    <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=53259574&version=offline&form=python&langType=python" target="_blank">æè</a> 
-    <a href="javascript:void(0);" onclick="switchtb('hz');">åä½</a>
-    <a href="javascript:void(0);" onclick="switchtb('xm');">é¡¹ç®</a>
-    <a href="javascript:void(0);" onclick="switchtb('cy');">æååå</a>
-    <a href="javascript:void(0);" onclick="switchtb('gywm');">å³äºæä»¬</a>
+    <a href="javascript:void(0);" onclick="switchtb('hm');">首页</a>
+    <a href="https://code.xueersi.com/home/project/detail?lang=code&pid=53259574&version=offline&form=python&langType=python" target="_blank">招聘</a>
+    <a href="javascript:void(0);" onclick="switchtb('xm');">项目</a>
+    <a href="javascript:void(0);" onclick="switchtb('cy');">成员名单</a>
+    <a href="javascript:void(0);" onclick="switchtb('gywm');">关于我们</a>
   </div>
-  
-  <div class="row" id="hz" style="display: none;">
-    <div class="leftcolumn">
-      <div class="card" onclick="window.open('https://code.xueersi.com/space/9439092');">
-        <div class="click-area">
-          <p>czå·¥ä½å®¤</p>
-          <p>åä½å·¥ä½å®¤</span></p>
-        </div>
-      </div>
-      <div class="card" onclick="window.open('https://code.xueersi.com/space/8582930');">
-        <div class="click-area">
-          <p>deceå·¥ä½å®¤</p>
-          <p>åä½å·¥ä½å®¤</p>
-        </div>
-      </div>
-      <div class="card" onclick="window.open('https://code.xueersi.com/space/12907647');">
-        <div class="click-area">
-          <p>éå¤©å¢é</p>
-          <p>åä½å·¥ä½å®¤</span></p>
-        </div>
-            </div>
-      <div class="card" onclick="window.open('https://code.xueersi.com/space/9030962');">
-        <div class="click-area">
-          <p>æ°äººå·¥ä½å®¤</p>
-          <p>æä¸å·¥ä½å®¤</span></p>
-        </div>
-            </div>
-      <div class="card" onclick="window.open('https://code.xueersi.com/space/11979059');">
-        <div class="click-area">
-          <p>é¶æ²³å¢é</p>
-          <p>åä½å¢é</span></p>
-        </div>
-            </div>
-      <div class="card" onclick="window.open('https://code.xueersi.com/space/22650542');">
-        <div class="click-area">
-          <p>æ¸¸é¾å·¥ä½å®¤</p>
-          <p>æä¸å·¥ä½å®¤</span></p>
-        </div>
-            </div>
-      <div class="card" onclick="window.open('https://code.xueersi.com/space/20830510');">
-        <div class="click-area">
-          <p>åå¶é</p>
-          <p>åä½å·¥ä½å®¤</span></p>
-        </div>
-            </div>
-      <div class="card" onclick="window.open('https://code.xueersi.com/space/43084629');">
-        <div class="click-area">
-          <p>æ°èæå­¦ç¤¾</p>
-          <p>æä¸æå­¦ç¤¾</span></p>
-        </div>
-            </div>
-      <div class="card" onclick="window.open('https://code.xueersi.com/space/80405785');">
-        <div class="click-area">
-          <p>å§å±±å·¥ä½å®¤</p>
-          <p>æä¸å·¥ä½å®¤</span></p>
-        </div>
-      </div>
-       <div class="card" onclick="window.open('https://code.xueersi.com/space/9030962');">
-        <div class="click-area">
-          <p>å¢¨éµå·¥ä½å®¤</p>
-          <p>æä¸å·¥ä½å®¤</span></p>
-        </div>
-            </div>
-
-     <div class="card" onclick="window.open('https://code.xueersi.com/space/21592857');">
-        <div class="click-area">
-          <p>æµ·é³å·¥ä½å®¤</p>
-          <p>æä¸å·¥ä½å®¤</span></p>
-        </div>
-            </div>
-     <div class="card" onclick="window.open('https://code.xueersi.com/space/21592857');">
-        <div class="click-area">
-          <p>CFå·¥ä½å®¤</p>
-          <p>æä¸å·¥ä½å®¤</span></p>
-        </div>
-            </div>
-    </div>
-</div>
 
   <div class="row" id="hm" style="display: flex;">
     <div class="leftcolumn">
       <div class="card">
-        <h2>æ¬¢è¿æ¥å°æ°å¯å¤å·¥ä½å®ç½</h2>
-        <p><span>â</span> <a href="https://lcim.guozhufeng.com/index.html#/" target="_blank">åCIM</a></p>
+        <h2>欢迎来到Reason Creation官网</h2>
         <p class="center-red-text">hello~</p>
         
         <div class="center">
-          <img src="kdlogo.png" alt="æä»¬çlogo">
+          <!--差一个log-->
+          <img src="Reason Creation.png" alt="Reason Creation Log">
         </div>
       </div>
     </div>
     
     <div class="rightcolumn">
       <div class="card">
-        <h2>ææ°èµè®¯</h2>
-        <p><span>â</span> <a href="https://kdgzs.wochaonima.top/kdxxjss/" target="_blank">xxj awï¼åå­¦ä¹ æºè®¿é®ç½ç«ï¼</a></p>
-        <p><span>â</span> <a href="https://lcimh5.guozhufeng.com" target="_blank">åCIM h5ç«¯</a></p>
-        <p><span>â</span> <a href="https://lcim.guozhufeng.com" target="_blank">åCIM webç«¯</a></p>
-      
-        
-
-        
-
+        <h2>最新资讯</h2>
+        <p><span>→</span> <a href="https://code.xueersi.com/space/33484236" target="_blank">学而思社区主页</a></p>
+        <p><span>→</span> <a href="https://lcimh5.guozhufeng.com" target="_blank">åCIM h5ç«¯</a></p>
+        <p><span>→</span> <a href="https://lcim.guozhufeng.com" target="_blank">åCIM webç«¯</a></p>
       </div>
     </div>
   </div>

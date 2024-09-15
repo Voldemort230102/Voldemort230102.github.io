@@ -166,7 +166,7 @@
     }
   </style>
   <script>
-    let lst = ['hm', 'join', 'cy', 'gywm', 'xm'];
+    let lst = ['home', 'join', 'cy', 'gywm', 'project'];
     function $(id){
         return document.getElementById(id);
     }
@@ -174,7 +174,7 @@
         let i = 0;
         for (;i<=4;i++){
             if (lst[i] == tb){
-                $(tb).style="display: flex;";
+                $(lst[i]).style="display: flex;";
             }
             else{
                 $(lst[i]).style="display: none;";
@@ -190,17 +190,17 @@
   </div>
   
   <div class="topnav" style="font-size: 0.9em;">
-    <a href="javascript:void(0);" onclick="switchtb('hm');">首页</a>
-    <a href="javascript:void(0);" onclick="switchtb('xm');">项目</a>
+    <a href="javascript:void(0);" onclick="switchtb('home');">首页</a>
+    <a href="javascript:void(0);" onclick="switchtb('project');">项目</a>
     <a href="javascript:void(0);" onclick="switchtb('join');">加入我们</a>
-    <!--
     <a href="javascript:void(0);" onclick="switchtb('cy');">成员名单</a>
+    <!--
     <a href="javascript:void(0);" onclick="switchtb('gywm');">关于我们</a>
     -->
   </div>
   
   <!--首页-->
-  <div class="row" id="hm" style="display: flex;">
+  <div class="row" id="home" style="display: flex;">
     <!--首页左边栏-->
     <div class="leftcolumn">
       <div class="card">
@@ -219,18 +219,23 @@
       <div class="card">
         <h2>最新资讯</h2>
         <p><span>→</span> <a href="https://code.xueersi.com/space/33484236" target="_blank">学而思社区主页</a></p>
+        <p><span>→</span> <a href="https://coding-oj.gaotu100.com/user-home?uid=c1d7f94044a2485ea89761d5332e1121&username=%E6%9D%8E%E4%BF%A3%E5%98%89" target="_blank">高途OJ主页</a></p>
         <p><span>→</span> 敬请期待……</p>
       </div>
     </div>
   </div>
   
   <!--项目-->
-  <div class="row" id="xm" style="display: none;">
+  <div class="row" id="project" style="display: none;">
     <div class="leftcolumn">
       <div class="row">
         <div class="card3" onclick="window.open('https://github.com/Voldemort230102/Double_Fly');">
           <h2>Double Fly</h2>
           <p>一个管理程序</p>
+        </div>
+        <div class="card3" onclick="window.open('https://github.com/Voldemort230102/GTOJApi_Fly');">
+          <h2>GTOJApi_Fly</h2>
+          <p>一个可以使用GTOJ的API的程序</p>
         </div>
         <div class="card3" onclick="window.open('https://Voldemort230102.github.io');">
           <h2>Reason Creation官网</h2>
@@ -257,41 +262,25 @@
   <div class="row" id="cy" style="display: none;">
     <div class="leftcolumn">
       <div class="row">
-        <div class="card" onclick="openInNewTab('https://code.xueersi.com/space/9909258?to=homepages')" style="padding: 5px 18px;">
-          <h2>老w</h2>
-          <p>室长/创始人</p>
+        <div class="card" style="padding: 5px 18px;">
+          <h2>Voldemort</h2>
+          <p>统帅/创始人</p>
         </div>
-        <div class="card" onclick="openInNewTab('https://code.xueersi.com/space/9439092?to=homepages')" style="padding: 4px 18px;">
-          <h2>陈致</h2>
-          <p>副室长</p>
+        <div class="card" style="padding: 5px 18px;">
+          <h2>YHY</h2>
+          <p>副统帅</p>
         </div>
-        <div class="card" onclick="openInNewTab('https://code.xueersi.com/space/24022994?to=homepages')" style="padding: 5px 18px;">
-          <h2>刘元序</h2>
-          <p>scratch部部长</p>
+        <div class="card" style="padding: 5px 18px;">
+          <h2>YZF</h2>
+          <p>同志</p>
         </div>
-        <div class="card" onclick="openInNewTab('https://code.xueersi.com/space/21659524?to=homepages')" style="padding: 5px 18px;">
-          <h2>樊伊航</h2>
-          <p>Python部部长</p>
-        </div>
-        <div class="card" onclick="openInNewTab('https://code.xueersi.com/space/24804907?to=homepages')" style="padding: 5px 18px;">
-          <h2>未定</h2>
-          <p>c++部部长</p>
-        </div>
-        <div class="card" onclick="openInNewTab('https://code.xueersi.com/space/22650542?to=homepages')" style="padding: 5px 18px;">
-          <h2>王翊好</h2>
-          <p>人事部部长</p>
-        </div>
-        <div class="card" onclick="openInNewTab('https://code.xueersi.com/home/project/detail?lang=code&pid=53259574&version=offline&form=python&langType=python')" style="padding: 5px 18px;">
-          <h2>未定</h2>
-          <p>宣传部部长</p>
-        </div>
-        <div class="card" onclick="openInNewTab('https://code.xueersi.com/home/project/detail?lang=code&pid=53259574&version=offline&form=python&langType=python')" style="padding: 5px 18px;">
-          <h2>未定</h2>
-          <p>未定</p>
+        <div class="card" style="padding: 5px 18px;">
+          <h2>CZM</h2>
+          <p>同志</p>
         </div>
         <div class="card" style="padding: 5px 20px;">
-          <h2>以上是高管成员</h2>
-          <p>截止目前，我们大约有45人</p>
+          <h2>以上是全部成员</h2>
+          <p>截止目前，我们有4人</p>
         </div>
       </div>
     </div>

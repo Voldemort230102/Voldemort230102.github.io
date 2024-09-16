@@ -166,13 +166,13 @@
     }
   </style>
   <script>
-    let lst = ['home', 'join', 'members', 'about', 'project'];
+    let lst = ['home', 'join', 'members', 'about', 'project', 'member_voldemort'];
     function $(id){
         return document.getElementById(id);
     }
     function switchtb(tb){
         let i = 0;
-        for (;i<=4;i++){
+        for (;i<=lst.length-1;i++){
             if (lst[i] == tb){
                 $(lst[i]).style="display: flex;";
             }
@@ -260,7 +260,7 @@
   <div class="row" id="members" style="display: none;">
     <div class="leftcolumn">
       <div class="row">
-        <div class="card" style="padding: 5px 18px;">
+        <div class="card" onclick="switchtb('member_voldemort');" style="padding: 5px 18px;">
           <h2>Voldemort</h2>
           <p>统帅/创始人</p>
         </div>
@@ -283,7 +283,18 @@
       </div>
     </div>
   </div>
-  
+
+  <div class="row" id="member_voldemort" style="display: none;">
+    <div class="leftcolumn" style="display: inline-block;">
+      <div class="topnav" style="font-size: 0.9em;">
+        <a href="javascript:void(0);" onclick="switchtb('members');">返回上一级</a>
+      </div>
+      <div class="card2">
+        <p style="text-align: center; font-size: 35px;"><b>Voldemort</b></p>
+      </div>
+    </div>
+  </div>
+
   <!--关于我们-->
   <div class="row" id="about" style="display: none;">
     <div class="leftcolumn" style="display: inline-block;">

@@ -166,7 +166,7 @@
     }
   </style>
   <script>
-    let lst = ['home', 'join', 'members', 'about', 'project', 'member_voldemort'];
+    let lst = ['home', 'join', 'members', 'about', 'project', 'member_voldemort', 'member_yhy', 'member_yzf', 'member_czm'];
     function $(id){
         return document.getElementById(id);
     }
@@ -264,15 +264,15 @@
           <h2>Voldemort</h2>
           <p>统帅/创始人</p>
         </div>
-        <div class="card" style="padding: 5px 18px;">
+        <div class="card" onclick="switchtb('member_yhy');" style="padding: 5px 18px;">
           <h2>YHY</h2>
           <p>副统帅</p>
         </div>
-        <div class="card" style="padding: 5px 18px;">
+        <div class="card" onclick="switchtb('member_yzf');" style="padding: 5px 18px;">
           <h2>YZF</h2>
           <p>同志</p>
         </div>
-        <div class="card" style="padding: 5px 18px;">
+        <div class="card" onclick="switchtb('member_czm');" style="padding: 5px 18px;">
           <h2>CZM</h2>
           <p>同志</p>
         </div>
@@ -284,16 +284,51 @@
     </div>
   </div>
 
+  <!--Voldemort简介-->
   <div class="row" id="member_voldemort" style="display: none;">
     <div class="leftcolumn" style="display: inline-block;">
       <div class="topnav" style="font-size: 0.9em;">
         <a href="javascript:void(0);" onclick="switchtb('members');">返回上一级</a>
       </div>
       <div class="card2">
-        <p style="text-align: center; font-size: 35px;"><b>Voldemort</b></p>
+        <h2>Voldemort</h2>
       </div>
     </div>
   </div>
+  <!--YHY简介-->
+  <div class="row" id="member_yhy" style="display: none;">
+    <div class="leftcolumn" style="display: inline-block;">
+      <div class="topnav" style="font-size: 0.9em;">
+        <a href="javascript:void(0);" onclick="switchtb('members');">返回上一级</a>
+      </div>
+      <div class="card2">
+        <h2>YHY</h2>
+      </div>
+    </div>
+  </div>
+  <!--YZF简介-->
+  <div class="row" id="member_yzf" style="display: none;">
+    <div class="leftcolumn" style="display: inline-block;">
+      <div class="topnav" style="font-size: 0.9em;">
+        <a href="javascript:void(0);" onclick="switchtb('members');">返回上一级</a>
+      </div>
+      <div class="card2">
+        <h2>YZF</h2>
+      </div>
+    </div>
+  </div>
+  <!--CZM简介-->
+  <div class="row" id="member_czm" style="display: none;">
+    <div class="leftcolumn" style="display: inline-block;">
+      <div class="topnav" style="font-size: 0.9em;">
+        <a href="javascript:void(0);" onclick="switchtb('members');">返回上一级</a>
+      </div>
+      <div class="card2">
+        <h2>CZM</h2>
+      </div>
+    </div>
+  </div>
+
 
   <!--关于我们-->
   <div class="row" id="about" style="display: none;">

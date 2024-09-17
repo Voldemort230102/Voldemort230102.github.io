@@ -166,7 +166,7 @@
     }
   </style>
   <script>
-    let lst = ['home', 'join', 'members', 'about', 'project', 'member_voldemort', 'member_yhy', 'member_yzf', 'member_czm'];
+    let lst = ['home', 'join', 'join_rc', 'members', 'about', 'project', 'member_voldemort', 'member_yhy', 'member_yzf', 'member_czm'];
     function $(id){
         return document.getElementById(id);
     }
@@ -184,11 +184,13 @@
   </script>
 </head>
 <body>
+  <!--大标题-->
   <div class="header">
     <h1>Reason Creation</h1>
     <p>由Voldemort建立</p>
   </div>
-  
+
+  <!--标签-->
   <div class="topnav" style="font-size: 0.9em;">
     <a href="javascript:void(0);" onclick="switchtb('home');">首页</a>
     <a href="javascript:void(0);" onclick="switchtb('project');">项目</a>
@@ -247,15 +249,38 @@
   <div class="row" id="join" style="display: none;">
     <div class="leftcolumn">
       <!--这里更改一下-->
-      <div class="card" onclick="window.open('https://Voldemort230102.github.io');">
+      <div class="card" onclick="switchtb('join_rc');">
         <div class="click-area">
           <h2>Reason Creation</h2>
-          <p>Reason Creation</p>
+          <p>理性创造</p>
         </div>
       </div>
     </div>
   </div>
-  
+
+  <!--加入Reason Creation-->
+  <div class="row" id="join_rc" style="display: none;">
+    <div class="leftcolumn" style="display: inline-block;">
+      <div class="topnav" style="font-size: 0.9em;">
+        <a href="javascript:void(0);" onclick="switchtb('join');">返回上一级</a>
+      </div>
+      <div class="card2">
+        <p style="text-align: center; font-size: 35px;">Reason Creation</p>
+        <p style="text-align: center; font-size: 20px;">理性创造</p>
+        <p style="text-align: center; font-size: 20px;">加入方式分为以下几种</p>
+        <br>
+        <p style="text-align: center; font-size: 20px;">大众方法</p>
+        <p style="text-align: center; font-size: 20px;">①通过邮箱联系：lyj_230102@outlook.con</p>
+        <p style="text-align: center; font-size: 20px;">②通过微信联系：liyujiadeweixin_</p>
+        <p style="text-align: center; font-size: 20px;">微信名：Voldemort</p>
+        <br>
+        <p style="text-align: center; font-size: 20px;">小众方法</p>
+        <p style="text-align: center; font-size: 20px;">③通过首页 “C站社区主页” 向任意一个作品下评论</p>
+        <p style="text-align: center; font-size: 20px;">④通过首页 “高途OJ主页” 向任意一个帖子下评论</p>
+      </div>
+    </div>
+  </div>
+
   <!--成员-->
   <div class="row" id="members" style="display: none;">
     <div class="leftcolumn">
@@ -329,13 +354,15 @@
     </div>
   </div>
 
-
   <!--关于我们-->
   <div class="row" id="about" style="display: none;">
     <div class="leftcolumn" style="display: inline-block;">
       <div class="card2">
         <p style="text-align: center; font-size: 35px;">关于Reason Creation</p>
         <p style="text-align: center; font-size: 20px;">Reason Creation成立于2023年</p>
+        <p style="text-align: center; font-size: 20px;">中文名称“理性创造”</p>
+        <p style="text-align: center; font-size: 20px;">成立时原名“Darkness Kill”，于2024年更名为“Reason Creation”</p>
+        <br>
         <p style="text-align: center; font-size: 20px;">组织成立时仅由Voldemort与YHY构成</p>
         <p style="text-align: center; font-size: 20px;">成立后一年YZF加入</p>
         <p style="text-align: center; font-size: 20px;">成立后一年半CZM加入</p>

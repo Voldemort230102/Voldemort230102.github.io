@@ -174,23 +174,63 @@
         let lst = ['home', 'join', 'join_rc', 'members', 'about', 'project',
             'member_voldemort', 'member_yhy', 'member_yzf', 'member_czm', 'member_ljz'];
         let lock_lst = ['notice'];
-        let lock = ['202cb962ac59075b964b07152d234b70'];
-        function $(id){
+        let lock_dic = {'notice':'202cb962ac59075b964b07152d234b70'};
+        function $(id)
+        {
             return document.getElementById(id);
         }
         function switchtb(tb){
             let i = 0;
-            for (;i<=lock_lst.length-1;i++){
-                $(lock_lst[i]).style="display: none;";
+            for (;i<=lock_lst.length-1;i++)
+            {
+                if (document.getElementById(lock_lst[i]) != null)
+                {
+                    $(lock_lst[i]).style = "display: none;";
+                }
             }
             i = 0;
-            for (;i<=lst.length-1;i++){
-                if (lst[i] == tb){
+            for (;i<=lst.length-1;i++)
+            {
+                if (lst[i] == tb)
+                {
                     $(lst[i]).style="display: flex;";
                 }
-                else{
+                else
+                {
                     $(lst[i]).style="display: none;";
                 }
+            }
+        }
+        function lock_switchtb(tb)
+        {
+            let key = prompt("请输入密码：");
+            if (lock_dic[tb] == md5(key))
+            {
+                let xhr = new XMLHttpRequest();
+                xhr.open("GET","https://livefile.xesimg.com/programme/python_assets/3d40a64156e8d231f6b7c2fbe39e9998.html",true);
+                xhr.send();
+                xhr.onload = () => {
+                    if(xhr.status == 200)
+                    {
+                        let dart=xhr.responseText;
+                        alert(dart);
+                        let div = document.createElement("body");
+                        div.setAttribute("class","row");
+                        div.setAttribute("id",tb);
+                        div.setAttribute("style","display: none;");
+                        div.innerHTML = dart;
+                        let parent = document.getElementsByTagName("body")[0];
+                        parent.insertBefore(div,document.getElementById("project"));
+                    }
+                    else
+                    {
+                        console.log(`error ${xhr.status}`)
+                    }
+                }
+            }
+            else
+            {
+                return;
             }
         }
     </script>

@@ -195,10 +195,15 @@
     }
     function lock_switchtb(tb){
       let key = prompt('请输入密码：');
+      let parent = document.getElementsByTagName("body")[0];
       let i = 0;
       for (;i<=lock_lst.length-1;i++){
         if (lock_lst[i] == tb){
           if (lock[i] == md5(key)){
+            if (document.getElementById(tb) == null) {
+              let div = document.createElement("div");
+              
+            }
             $(lock_lst[i]).style="display: flex;";
           }
           else{
@@ -263,13 +268,13 @@
   </div>
 
   <!--通告-->
-  <div class="row" id="notice" style="display: none;">
-    <div class="leftcolumn" style="display: inline-block;">
-      <div class="card2">
-        <p style="text-align: center; font-size: 35px;">暂无……</p>
-      </div>
-    </div>
-  </div>
+<!--  <div class="row" id="notice" style="display: none;">-->
+<!--    <div class="leftcolumn" style="display: inline-block;">-->
+<!--      <div class="card2">-->
+<!--        <p style="text-align: center; font-size: 35px;">暂无……</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
 
   <!--项目-->
   <div class="row" id="project" style="display: none;">

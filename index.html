@@ -201,58 +201,6 @@
                 }
             }
         }
-        function lock_switchtb(tb)
-        {
-            let key = prompt("请输入密码：");
-            if (lock_dic[tb] == md5(key))
-            {
-                let xhr = new XMLHttpRequest();
-                xhr.open("GET","https://livefile.xesimg.com/programme/python_assets/3d40a64156e8d231f6b7c2fbe39e9998.html",true);
-                xhr.send();
-                xhr.onload = () => {
-                    if(xhr.status == 200)
-                    {
-                        let dart=xhr.responseText;
-                        alert(dart);
-                        let div = document.createElement("div");
-                        div.setAttribute("class","row");
-                        div.setAttribute("id",tb);
-                        div.setAttribute("style","display: none;");
-                        div.innerHTML = dart;
-                        let parent = document.getElementsByTagName("body")[0];
-                        parent.insertBefore(div,document.getElementById("project"));
-                        let i = 0;
-                        for (;i<=lst.length-1;i++)
-                        {
-                            if (document.getElementById(lst[i]) != null)
-                            {
-                                $(lst[i]).style = "display: none;";
-                            }
-                        }
-                        i = 0;
-                        for (;i<=lock_lst.length-1;i++)
-                        {
-                            if (lock_lst[i] == tb)
-                            {
-                                $(lock_lst[i]).style="display: flex;";
-                            }
-                            else
-                            {
-                                $(lock_lst[i]).style="display: none;";
-                            }
-                        }
-                    }
-                    else
-                    {
-                        console.log(`error ${xhr.status}`)
-                    }
-                }
-            }
-            else
-            {
-                alert("密码错误！");
-            }
-        }
     </script>
 </head>
 <body>

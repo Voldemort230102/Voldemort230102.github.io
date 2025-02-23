@@ -170,7 +170,12 @@
     </style>
     <script>
         let url = window.location.href;
-        alert("你访问的 Voldemort230102.github.io 下的 " + url.split(".io/")[1] + " 页面不存在");
+        let page = url.split(".io/")[1];
+        if (page[-1] == "/")
+        {
+            page.slice(0, -1);
+        }
+        alert("你访问的 Voldemort230102.github.io 下的 " + page + " 页面不存在");
     </script>
 </head>
 <body class="container">

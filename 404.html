@@ -175,11 +175,10 @@
     <h1>404</h1>
     <p>您访问的网页不存在</p>
 </div>
-
-<!--关于我们-->
+<!--404-->
 <div class="row" id="about" style="display: flex;">
     <div class="leftcolumn" style="display: inline-block;">
-        <div class="card2">
+        <div id="c1" class="card2">
             <p style="text-align: center; font-size: 40px;">404</p>
             <p id="t1" style="text-align: center; font-size: 20px;"></p>
         </div>
@@ -195,13 +194,21 @@
 <script>
     let url = window.location.href;
     let page = url.split(".io/")[1].split("?")[0].split("#")[0];
-    let path = [];
+    let path_doing = ["LoveFly","lovefly","Lovefly","loveFly"];
+    let path_letter = ["Tmachine","tMachine","tmachine"];
     if (page[-1] == "/")
     {
         page = page.slice(0, -1);
     }
-    if (page)
-    let text = "你访问的 Voldemort230102.github.io 下的 " + page + " 页面不存在";
+    let text = "您访问的 Voldemort230102.github.io 下的 " + page + " 页面不存在";
+    for (let i = 0;i<path_doing.length;i++)
+    {
+        if (page == path_doing[i])
+        {
+            text = "您访问的 Voldemort230102.github.io 下的 " + page + " 页面还未建立完成";
+            document.getElementById("c1").innerHTML = document.getElementById("c1").innerHTML + '<p style="text-align: center; font-size: 20px;">沧溟 正在全力编写，并马上将会发布</p>';
+        }
+    }
     document.getElementById("t1").innerText = text;
 </script>
 

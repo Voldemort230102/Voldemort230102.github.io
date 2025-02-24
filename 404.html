@@ -192,24 +192,35 @@
 </footer>
 
 <script>
+    // 处理路径
     let url = window.location.href;
     let page = url.split(".io/")[1].split("?")[0].split("#")[0];
-    let path_doing = ["LoveFly","lovefly","Lovefly","loveFly"];
-    let path_letter = ["Tmachine","tMachine","tmachine"];
-    if (page[-1] == "/")
-    {
+    if (page[-1] == "/") {
         page = page.slice(0, -1);
     }
-    let text = "您访问的 Voldemort230102.github.io 下的 " + page + " 页面不存在";
-    for (let i = 0;i<path_doing.length;i++)
-    {
-        if (page == path_doing[i])
-        {
-            text = "您访问的 Voldemort230102.github.io 下的 " + page + " 页面还未建立完成";
-            document.getElementById("c1").innerHTML = document.getElementById("c1").innerHTML + '<p style="text-align: center; font-size: 20px;">沧溟 正在全力编写，并马上将会发布</p>';
+    // 判断类型
+    let flag = 0;
+    let path_letter = ["TMachine"];
+    for (let i = 0;i<path_letter.length;i++) {
+        let re1 = new RegExp(path_letter[i], "i");
+        if (page.split(re1).length >= 2) {
+            flag = 1;
         }
     }
-    document.getElementById("t1").innerText = text;
+    let text;
+    if (flag == 0) {
+        // 判断是否正在建立
+        let path_doing = ["LoveFly"];
+        text = "您访问的 Voldemort230102.github.io 下的 " + page + " 页面不存在";
+        for (let i = 0; i < path_doing.length; i++) {
+            let re2 = new RegExp(path_doing[i], "i");
+            if (page.split(re2).length >= 2) {
+                text = "您访问的 Voldemort230102.github.io 下的 " + path_doing[i] + " 页面还未建立完成";
+                document.getElementById("c1").innerHTML = document.getElementById("c1").innerHTML + '<p style="text-align: center; font-size: 20px;">沧溟 正在全力编写，并马上将会发布</p>';
+            }
+        }
+        document.getElementById("t1").innerText = text;
+    }
 </script>
 
 </body>

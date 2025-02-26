@@ -5,7 +5,7 @@
     <title>404</title>
     <!--<link rel="icon" href="./img/Reason%20Creation%202.png">-->
     <link rel="icon" href="https://livefile.xesimg.com/programme/python_assets/457664b8506c5df538ba5e681ec550bf.png">
-    <script src="./js/jquery-3.7.1.min.js">
+    <script src="./js/jquery-3.7.1.min.js"></script>
     <style>
         * {
             box-sizing: border-box;
@@ -201,12 +201,12 @@
     }
     // 判断类型
     let flag = 0;
-    let path_letter = ["TMachine"];
+    let path_letter = ["TMachine","404"];
     for (let i = 0;i<path_letter.length;i++) {
         let re1 = new RegExp(path_letter[i], "i");
         if (page.split(re1).length >= 2) {
             flag = 1;
-            document.getElementById()
+            $("title").text("跳转中……");
         }
     }
     let text;
@@ -218,10 +218,10 @@
             let re2 = new RegExp(path_doing[i], "i");
             if (page.split(re2).length >= 2) {
                 text = "您访问的 Voldemort230102.github.io 下的 " + path_doing[i] + " 页面还未建立完成";
-                document.getElementById("c1").innerHTML = document.getElementById("c1").innerHTML + '<p style="text-align: center; font-size: 20px;">沧溟 正在全力编写，并马上将会发布</p>';
+                $("#c1").html($("#c1").html() + '<p style="text-align: center; font-size: 20px;">沧溟 正在全力编写，并马上将会发布</p>');
             }
         }
-        document.getElementById("t1").innerText = text;
+        $("#t1").text(text);
     }
 </script>
 

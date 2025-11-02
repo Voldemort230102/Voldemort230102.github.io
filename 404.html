@@ -201,7 +201,7 @@
     }
     // 判断类型
     let flag = 0;
-    let path_letter = ["TMachine"];
+    let path_letter = ["TMachine","YuMeet"];
     for (let i = 0;i<path_letter.length;i++) {
         let re1 = new RegExp(path_letter[i], "i");
         if (page.split(re1).length >= 2) {
@@ -226,7 +226,7 @@
     let text;
     if (flag == 0) {
         // 判断是否正在建立
-        let path_doing = ["LoveFly", "YuMeet"];
+        let path_doing = [];
         text = "您访问的 Voldemort230102.github.io 下的 " + page + " 页面不存在";
         for (let i = 0; i < path_doing.length; i++) {
             let re2 = new RegExp(path_doing[i], "i");

@@ -196,7 +196,7 @@
     // 处理路径
     let url = window.location.href;
     let page = url.split(".io/")[1].split("?")[0].split("#")[0];
-    if (page[-1] == "/") {
+    if (page[page.length-1] == "/") {
         page = page.slice(0, -1);
     }
     // 判断类型
@@ -218,7 +218,7 @@
                 })
                 $("body").html("<p style=\"font-size: 50px;\">跳转中</p>")
                 setTimeout(function () {
-                    window.open('https://voldemort230102.github.io/' + page.split(re1).join(path_letter[i]), '_self');
+                    window.open('https://voldemort230102.github.io/' + page.split(re1).join(path_letter[i]) + '/', '_self');
                 }, 2000);
             });
         }
